@@ -12,5 +12,22 @@ namespace Lj2Dd1En2.Models
     {
         private string _connectionString =
             ConfigurationManager.ConnectionStrings["LosPollosHermanosDBConn"].ConnectionString;
+
+
+        public string Getmeals(ICollection<Meal> meals)
+        {
+            if (meals == null)
+            {
+                throw new ArgumentNullException("Ongeldig argument bij gebruik van GetMeals()");
+
+            }
+            string methodResult = "";
+            using (MySqlConnection conn = new(_connectionString))
+            {
+
+            }
     }
+    }
+
+    
 }
